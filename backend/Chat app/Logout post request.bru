@@ -1,0 +1,18 @@
+meta {
+  name: Logout post request
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5001/api/auth/logout
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "john@gmail.com",
+    "password": "12345678"
+  }
+}
