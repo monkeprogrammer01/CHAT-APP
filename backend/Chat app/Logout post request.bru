@@ -4,15 +4,12 @@ meta {
   seq: 4
 }
 
-post {
-  url: http://localhost:5001/api/auth/logout
+get {
+  url: http://localhost:5001/api/auth/profile
   body: json
-  auth: none
+  auth: bearer
 }
 
-body:json {
-  {
-    "email": "john@gmail.com",
-    "password": "12345678"
-  }
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTBkZjg2OTIzY2YzZThhMWY5Y2NkNDMiLCJpYXQiOjE3NjI1MjMyNDgsImV4cCI6MTc2MzEyODA0OH0.pL9rosWJobd9tKeZQF3-rFotGOqJLpfUEReLoFFqV6c
 }
